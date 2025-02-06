@@ -27,7 +27,6 @@ class PhotosActivity : AppCompatActivity() {
     private var isGridView = true // Shared preference to store view mode
     private val PICK_IMAGES_REQUEST = 71
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityPhotosBinding.inflate(layoutInflater)

@@ -22,7 +22,6 @@ class LockerActivity : AppCompatActivity() {
     private lateinit var prefManager: PrefManager
     private lateinit var googleSignInClient: GoogleSignInClient
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLockerBinding.inflate(layoutInflater)

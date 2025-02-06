@@ -12,6 +12,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.calculator.R
 import com.google.android.gms.tasks.OnFailureListener
 import com.google.android.gms.tasks.OnSuccessListener
@@ -52,16 +53,18 @@ class ShowImageAdapter(
 
         holder.imageName.text = currentImage.name
 
-        Picasso
-            .get()
+//        Picasso
+//            .get()
+//            .load(currentImage.url)
+//            .placeholder(DrawableHelper.circularProgressDrawable(context))
+//            .into(holder.image)
+
+        Glide.with(context)
             .load(currentImage.url)
-            .placeholder(DrawableHelper.circularProgressDrawable(context))
+            .placeholder(DrawableHelper.circularProgressDrawable(context))  // Set a placeholder during loading
             .into(holder.image)
-        /*
-                    Glide
-                        .with(Context)
-                    .load(imageModel.url)
-                    .into(holder.image)*/
+
+
 
         holder.listview_layout.setOnLongClickListener(OnLongClickListener {
             showDialog(currentImage)
