@@ -108,5 +108,4 @@ class VideosActivity : AppCompatActivity(), VideoItemClickListener  {
         startActivity(intent)
     }
 
-
 }
